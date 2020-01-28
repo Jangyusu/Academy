@@ -1,0 +1,91 @@
+@import url("common.css");
+
+h1 {
+    text-align: center;
+    font-size: 36px;
+    margin: 60px 0;
+}
+
+.con_box {
+    width: 740px;
+    border: 10px solid #000;
+    margin: 0 auto;
+    padding: 40px 60px;
+}
+
+.con_box h2, p {
+    text-align: center;
+}
+
+.con_box h2 {
+    font-size: 24px;
+}
+
+.con_box .con {
+    text-align: center;
+}
+
+.con_box .con > p {
+    margin: 20px 50px;
+}
+
+.con_box form {
+    width: 100%;
+}
+    
+.con_box .login{
+    width: 100%;
+}
+
+.con_box .login input{
+    width: 100%;
+    padding: 15px 10px;
+    border: 0;
+    border-top: 1px solid #7d7d7d;
+    font-size: 14px;
+    outline-style: none;
+}
+
+.con_box .login input:last-of-type {
+    border-bottom: 1px solid #7d7d7d;
+}
+
+.con_box .id_save {
+    font-size: 14px;
+    margin: 10px 0 0 0;
+    text-align: right;
+}
+
+.con_box .id_save input {
+    vertical-align: middle;
+}
+
+.con_box form input[type="submit"] {
+    background: #959595;
+    border: 0;
+    font-size: 14px;
+    padding: 10px 30px;
+    color: #fff;
+    margin: 5px 0 40px 0;
+}
+
+.con_box .join a {
+    text-decoration: underline;
+    color: #5e5e5e;
+}
+
+.con_box .join a {
+    text-decoration: underline;
+    color: #5e5e5e;
+    font-size: 14px;
+}
+
+.con_box .join a:first-of-type::after {
+    content: "";
+    width: 2px;
+    height: 15px;
+    display: inline-block;
+    background: #5e5e5e;
+    margin: 0 10px;
+    vertical-align: middle;
+}
