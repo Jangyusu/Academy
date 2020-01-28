@@ -1,0 +1,43 @@
+@import url("common.css");
+
+.header {
+    width: 100%;
+    background: #4087c3;
+}
+.header ul {
+    width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+.header ul li {
+    display: inline-block;
+}
+.header ul li a {
+    color: #fff;
+    padding: 10px 0 10px;
+    text-transform: uppercase;
+    position: relative;
+}
+.header ul li a:after {
+    content: "|";
+    padding: 0 20px;
+    opacity: .2;
+    font-size: .8em;
+    vertical-align: top;
+}
+.header ul li:last-of-type a::after {
+    content: "";
+}
+
+.header ul li a::before {
+    content: "";
+    border: 5px solid transparent;
+    border-bottom: 5px solid #fff;
+    position: absolute;
+    left: calc(50% - 26px); bottom: 0;
+    opacity: 0;
+}
+
+.header ul li:hover a::before {
+    opacity: 1;
+}
