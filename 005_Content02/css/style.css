@@ -10,7 +10,7 @@ section {
 }
 section content {
     position: absolute;
-    left: calc(50% - 400px); top: 60%;
+    left: 580px; top: 485px;
     z-index: 10;
 }
 section content h1 {
@@ -24,26 +24,39 @@ section content p {
 
 section ul {
     position: absolute;
-    left: calc(50% - 232px);
+    left: calc(50% - 220px);
 }
-section ul li {}
+section ul li {
+    position: absolute;
+}
 section ul li a {
     position: absolute;
-    right: -170px; top: 50%;
+    left: 700px;
+}
+section ul li a:hover {
+    font-size: 2em;
+}
+section ul li:nth-of-type(1) a {
+    top: 320px;
+}
+section ul li:nth-of-type(2) a {
+    top: 350px;
+}
+section ul li:nth-of-type(3) a {
+    top: 380px;
 }
 section ul li .img {
+    position: absolute;
     width: 465px;
     height: 792px;
-    margin: 0 auto;
 }
 section ul li:nth-of-type(1) .img {
     background: url(../img/img01.jpg) no-repeat center;
+    z-index: 1;
 }
 section ul li:nth-of-type(2) .img {
     background: url(../img/img02.jpg) no-repeat center;
-    display: none;
 }
 section ul li:nth-of-type(3) .img {
     background: url(../img/img03.jpg) no-repeat center;
-    display: none;
 }
