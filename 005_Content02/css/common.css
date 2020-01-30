@@ -1,6 +1,6 @@
 html,body{
     margin: 0;
-    font-family: 'NanumGothic';
+    font-family: 'Adobe Garamond Pro';
 }
 ul,li{
     list-style-type: none;
@@ -12,7 +12,6 @@ a{
 span,em,strong,a{display: inline-block;}
 *{
     margin:0;padding:0;
-    font-family: '';
     font-size:12px;
     color:#000;
     box-sizing:border-box;

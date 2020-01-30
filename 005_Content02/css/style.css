@@ -1,56 +1,49 @@
 @import url("common.css");
 
-body {
-    padding: 150px;
-}
 section {
     width: 1920px;
     height: 948px;
     margin: 0 auto;
-    padding: 78px 0;
     background: #ede0df;
-}
-section content {
-    width: 464px;
-    height: 791px;
-    background: url("../img/img01.jpg") no-repeat center;
-    display: block;
-    margin: 0 auto;
+    padding: 80px 0;
     position: relative;
 }
-section content h1 {
-    font-size: 83px;
+section content {
     position: absolute;
+    left: calc(50% - 400px); top: 60%;
+    z-index: 10;
+}
+section content h1 {
+    font-size: 83.03px;
     font-weight: normal;
-    left: -30%; bottom: 239px;
+    margin-bottom: 60px;
 }
 section content p {
-    position: absolute;    
-    left: -30%;
-}
-section content p:first-of-type {
-    bottom: 123px;
-}
-section content p:last-of-type {
-    bottom: 41px;
+    font-size: 12.29px;
 }
 
-section content aside {
-    display: flex;
-    flex-direction: column;
+section ul {
     position: absolute;
-    left: 610px; top: 150px;
+    left: calc(50% - 232px);
 }
-section content aside span {
-    padding: 17px 0;
+section ul li {}
+section ul li a {
+    position: absolute;
+    right: -170px; top: 50%;
 }
-section content aside span::after {
-    content: "";
-    width: 1px;
-    height: 114px;
-    background: #333;
-    display: block;
+section ul li .img {
+    width: 465px;
+    height: 792px;
+    margin: 0 auto;
 }
-section content aside span:hover {
-    font-size: 42px;
+section ul li:nth-of-type(1) .img {
+    background: url(../img/img01.jpg) no-repeat center;
+}
+section ul li:nth-of-type(2) .img {
+    background: url(../img/img02.jpg) no-repeat center;
+    display: none;
+}
+section ul li:nth-of-type(3) .img {
+    background: url(../img/img03.jpg) no-repeat center;
+    display: none;
 }
