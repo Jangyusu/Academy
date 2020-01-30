@@ -1,62 +1,63 @@
 @import url("common.css");
 
-section {
+/* main */
+main {
     width: 1920px;
     height: 948px;
-    margin: 0 auto;
     background: #ede0df;
-    padding: 80px 0;
-    position: relative;
-}
-section content {
-    position: absolute;
-    left: 580px; top: 485px;
-    z-index: 10;
-}
-section content h1 {
-    font-size: 83.03px;
-    font-weight: normal;
-    margin-bottom: 60px;
-}
-section content p {
-    font-size: 12.29px;
+    margin: 0 auto;
+    padding: 79px 561px 79px 735px;
+    display: flex;
+    justify-content: space-between;
 }
 
-section ul {
+/* section */
+section {
+    width: 619px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+section article {
+    height: 266px;
     position: absolute;
-    left: calc(50% - 220px);
+    left: -155px;
+    top: 484px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;    
 }
-section ul li {
-    position: absolute;
+section article h1 {
+    font-size: 83px;
 }
-section ul li a {
-    position: absolute;
-    left: 700px;
+section article p {
+    width: 280px;
+    font-size: 12px;
+    line-height: 1.5em;
 }
-section ul li a:hover {
-    font-size: 2em;
+
+/* nav */
+nav {
+    display: flex;
+    align-items: center;
 }
-section ul li:nth-of-type(1) a {
-    top: 320px;
+nav ul {
+    height: 305px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
 }
-section ul li:nth-of-type(2) a {
-    top: 350px;
+nav ul .line {
+    content: "";
+    width: 1px;
+    height: 144px;
+    background: #1c1a1a;
+    margin: 0 6px 0 0;
 }
-section ul li:nth-of-type(3) a {
-    top: 380px;
+nav ul li a {
+    font-size: 12px;
 }
-section ul li .img {
-    position: absolute;
-    width: 465px;
-    height: 792px;
-}
-section ul li:nth-of-type(1) .img {
-    background: url(../img/img01.jpg) no-repeat center;
-    z-index: 1;
-}
-section ul li:nth-of-type(2) .img {
-    background: url(../img/img02.jpg) no-repeat center;
-}
-section ul li:nth-of-type(3) .img {
-    background: url(../img/img03.jpg) no-repeat center;
+nav ul li:first-of-type a {
+    font-size: 42px;
 }
