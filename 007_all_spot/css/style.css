@@ -1,0 +1,172 @@
+@import url('common.css');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Poppins:300,500&display=swap');
+
+
+/*
+font-family: 'Poppins', sans-serif;
+font-family: 'Playfair Display', serif;
+*/
+
+
+/* body */
+body {
+    margin: 0 auto;
+    font-family: 'Playfair Display', serif;
+}
+
+
+/* heder */
+header {
+    width: 100%;
+    height: 151px;
+    padding: 0 10%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+header .nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .nav h1 a {
+    font-weight: bold;
+    font-size: 30px;
+}
+header .nav ul {
+    width: 387px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .nav ul li a {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+}
+header .nav .burger {
+    width: 30px;
+    height: 18px;
+    position: relative;
+}
+header .nav .burger span {    
+    height: 2px;
+    background: #000;
+    display: block;
+    position: absolute;
+    border-radius: 30px;
+    transition: .5s;
+}
+header .nav .burger:hover span {
+    height: 4px;
+
+}
+header .nav .burger:hover span:nth-of-type(1) {
+    width: 30px;
+    top: 50%;
+    transform: translatey(-50%);
+    transform: rotate(45deg);
+}
+header .nav .burger:hover span:nth-of-type(2) {
+    opacity: 0;
+}
+header .nav .burger:hover span:nth-of-type(3) {
+    width: 30px;
+    top: 50%;
+    transform: translatey(-50%);
+    transform: rotate(-45deg);
+}
+header .nav .burger span:nth-of-type(1){
+    width: 30px;
+    top: 0;
+}
+header .nav .burger span:nth-of-type(2){
+    width: 21px;
+    top: 50%;
+    transform: translatey(-50%);
+}
+header .nav .burger span:nth-of-type(3){
+    width: 26px;
+    bottom: 0;
+}
+
+
+/* section */
+section {
+    width: 100%;
+    height: 850px;
+    margin: 0 auto;
+    background: url(../img/background.jpg) no-repeat top;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 91px;
+}
+section article {
+    width: 904px;
+    height: 643px;
+    background: #fff;
+    box-shadow: 1px 1px 100px rgba(0,0,0,.3);
+    padding: 40px 60px;
+}
+section article h2 {
+    width: 781px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 100px;
+    font-weight: normal;
+    font-size: 20px;
+}
+section article h2 .sns {
+    width: 84px;
+    display: flex;
+    justify-content: space-between;
+}
+section article figure {
+    height: 418px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+section article figure figcaption {
+    font-weight: lighter;
+    text-transform: uppercase;
+    white-space: pre-line;
+    letter-spacing: 0.1em;
+}
+section article figure figcaption span:first-of-type {
+    font-size: 20px;    
+    font-family: 'Poppins', sans-serif;
+    font-weight: lighter;
+}
+section article figure figcaption span:last-of-type {
+    font-size: 18px;
+}
+section article figure figcaption span mark {
+    font-size: 18px;
+    background: #fed38e;
+    margin-left: 7px;
+    padding: 0 2px 0 4px;
+}
+section article figure figcaption span a {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+/* footer */
+footer {
+    width: 100%;
+    height: 199px;
+    padding: 94px 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+footer p {
+    font-family: "Myriad Pro";
+    font-size: 15px;
+    color: #bcbcbc;
+}
