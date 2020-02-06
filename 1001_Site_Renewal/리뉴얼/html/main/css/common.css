@@ -1,0 +1,16 @@
+html, body {
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration-line: none;
+}
+ul, li {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+}
+*{
+    box-sizing: border-box;
+}
