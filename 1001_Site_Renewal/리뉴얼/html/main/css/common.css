@@ -13,6 +13,7 @@ ul, li {
 }
 img {
     font-size: 0;
+    vertical-align: top;
     display: inline-block;
 }
 *{
