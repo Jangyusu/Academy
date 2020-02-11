@@ -1,31 +1,238 @@
-@import url("../css/common.css");
+@import url("common.css");
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400&display=swap');
 
-img {
-    height: 311px;
+/* font
+
+font-family: 'Roboto', sans-serif;
+
+ */
+
+html, body {
+    font-family: 'Roboto', sans-serif;
 }
+
+
+
+/* wrap */
 
 .wrap {}
-header {}
-section {}
-section .row {}
-section .row figure {
+
+
+/* header */
+
+header {
+    width: 16%; height: 100%;
+    background: #242b2e;
+    padding: 0;
+    box-shadow: 5px 5px 30px #000;
+    position: fixed; z-index: 1;
+}
+header .hea_top {
+    height: 125px;
+    background: #fff;
+    display: flex; justify-content: center; align-items: center;
+}
+header .hea_top_logo {
+    display: flex; flex-direction: column;
+}
+header .hea_top_logo p:first-of-type {
+    font-size: 47.63px;
+    color: #364048;
+}
+header .hea_top_logo p:last-of-type {
+    text-align: end;
+}
+header .hea_top_logo p img {
+    margin-top: -24px;
+}
+header nav {
+    width: 100%; height: 372px;
+}
+header nav .hea_menu li {
+    width: 100%; height: 62px;
+    background: linear-gradient(180deg, #333b3f, #2e363a);
+    display: flex; justify-content: flex-end; align-items: center;
+    border-bottom: 1px solid #293034;
+    transition: .5s;
+}
+header nav .hea_menu li:hover {
+    background: #1ab5b3;
+}
+header nav .hea_menu li a {
+    width: 100%; height: 100%;
+    padding-right: 24px;
+    font-size: 18px;
+    color: #fff;
+    line-height: 32px;
+    text-transform: uppercase;
+    text-decoration-line: none;
+    display: flex; align-items: center; justify-content: flex-end;
+}
+
+header .hea_bottom {
+    height: 583px;
+}
+header .hea_bottom .hea_text {
+    height: 222px;
+    padding-right: 25px;
+    text-align: end;
+    border-bottom: 1px solid #293034;
+}
+header .hea_bottom .hea_text h3 span {
+    font-size: 19px;
+    line-height: 32px;
+    color: #1ab5b3;
+    margin-right: 12px;    
+}
+header .hea_bottom .hea_text h3 svg path {
+    color: #1ab5b3;
+}
+header .hea_bottom .hea_text ul li a {
+    text-decoration-line: none;
+    font-size: 13px;
+    color: #6b7072;
+    transition: .5s;
+}
+header .hea_bottom .hea_text ul li:hover a {
+    color: #fff;
+}
+header .hea_bottom .hea_sns {
+    padding-right: 25px;
+    margin: 28px 0 24px;
+    text-align: end;
+}
+header .hea_bottom .hea_sns a {
+    margin-left: 9px;
+    opacity: .8;
+    transition: .5s;
+}
+header .hea_bottom .hea_sns a:hover {
+    opacity: 1;
+}
+header .hea_bottom .hea_sns a:first-of-type {
+    margin: 0;
+}
+header .hea_bottom > p {
+    padding-right: 25px;
+    font-size: 12px;
+    color: #6b7072;
+    text-align: end;
+}
+
+
+
+
+
+
+
+
+.row {
+    margin: 0;
+}
+
+section {
+    width: 84%;
+    left: 16%;
     position: relative;
 }
-section .row figure img {}
+
+
+section .row figure {
+    position: relative;
+    padding: 0;
+}
+section .row figure img {
+    width: 100%;
+    padding: 0;
+}
 section .row figure .hover_box {
     position: absolute; left: 0; top: 0;
     width: 100%; height: 100%;
-    margin: 0 15px;
     background: #1ab5b3;
-    opacity: .9;
     display: flex; justify-content: center; align-items: center; flex-direction: column;
+    opacity: 0;
+    transition: .5s;
+}
+section .row figure:hover .hover_box {
+    opacity: 0.9;
 }
 section .row figure .hover_box p {
     color: #fff;
+    font-weight: lighter;
+    line-height: 30px;
 }
-section .row figure .hover_box p:nth-of-type(1) {}
-section .row figure .hover_box p:nth-of-type(2) {}
+section .row figure .hover_box p:nth-of-type(1) {
+    font-size: 24px;
+}
+section .row figure .hover_box p:nth-of-type(2) {
+    font-size: 12px;
+}
 section .row figure .hover_box span {
     width: 107px; height: 1px;
     background: #fff;
+    margin-bottom: 18px;
+}
+
+section .row figure .hover_box a {
+    width: 61px; height: 61px;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    display: flex; justify-content: center; align-items: center;
+}
+section .row figure .hover_box a svg path {
+    color: #fff;
+}
+
+
+
+
+
+
+aside {
+    position: fixed; right: 0; top: 0;
+}
+aside .inf {
+    display: flex; flex-direction: column; align-items: flex-end;
+    position: relative;
+}
+aside .inf .inf_box {
+    width: 90px; height: 90px;
+    background: #21acac;
+    display: flex; justify-content: center; align-items: center;
+}
+aside .inf .inf_box a  {
+    width: 61px; height: 61px;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    display: flex; justify-content: center; align-items: center;
+    font-size: 28px;
+}
+aside .inf .inf_box a svg path {
+    font-size: 28px;
+    color: #fff;
+}
+aside .inf .inf_text {
+    width: 283px; height: 130px;
+    background: #000;
+    padding-left: 18px;
+    display: flex; flex-direction: column; justify-content: space-around;
+    opacity: 0;
+    transition: .5s;
+    position: absolute; right: 0; top: 90px;
+}
+aside .inf:hover .inf_text {
+    opacity: 0.7;
+}
+aside .inf .inf_text p {
+    font-size: 16px;
+    line-height: 15px;
+    color: #fff;
+}
+aside .inf .inf_text p svg {
+    margin-right: 11px;    
+}
+aside .inf .inf_text p svg path{
+    font-size: 20px;
+    line-height: 15px;
+    color: #fff;
 }
