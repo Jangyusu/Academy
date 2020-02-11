@@ -352,7 +352,7 @@ section {
 .information .inf_hover > p:first-of-type::after {
     content: "";
     width: 48px; height: 2px;
-    margin: 22px auto 20px;
+    margin: 22px auto 60px;
     background: #fff;
     display: block;
 }
