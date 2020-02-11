@@ -11,13 +11,6 @@ html, body {
     font-family: 'Roboto', sans-serif;
 }
 
-
-
-/* wrap */
-
-.wrap {}
-
-
 /* header */
 
 header {
@@ -49,7 +42,7 @@ header nav {
     width: 100%; height: 372px;
 }
 header nav .hea_menu li {
-    width: 100%; height: 62px;
+    width: 100%; height: 100%;
     background: linear-gradient(180deg, #333b3f, #2e363a);
     display: flex; justify-content: flex-end; align-items: center;
     border-bottom: 1px solid #293034;
@@ -102,6 +95,7 @@ header .hea_bottom .hea_sns {
     text-align: end;
 }
 header .hea_bottom .hea_sns a {
+    margin-top: 9px;
     margin-left: 9px;
     opacity: .8;
     transition: .5s;
@@ -132,7 +126,7 @@ header .hea_bottom > p {
 
 section {
     width: 84%;
-    left: 16%;
+    left: 16%; top: 0;
     position: relative;
 }
 
@@ -190,6 +184,7 @@ section .row figure .hover_box a svg path {
 
 aside {
     position: fixed; right: 0; top: 0;
+    z-index: 2;
 }
 aside .inf {
     display: flex; flex-direction: column; align-items: flex-end;
@@ -215,13 +210,12 @@ aside .inf .inf_text {
     width: 283px; height: 130px;
     background: #000;
     padding-left: 18px;
-    display: flex; flex-direction: column; justify-content: space-around;
-    opacity: 0;
-    transition: .5s;
+    display: none;
+    opacity: .8;
     position: absolute; right: 0; top: 90px;
 }
 aside .inf:hover .inf_text {
-    opacity: 0.7;
+    display: flex; flex-direction: column; justify-content: space-around;
 }
 aside .inf .inf_text p {
     font-size: 16px;
@@ -235,4 +229,46 @@ aside .inf .inf_text p svg path{
     font-size: 20px;
     line-height: 15px;
     color: #fff;
+}
+
+
+@media (max-width:992px) {
+    header {
+        width: 100%; height: auto;
+    }
+    header nav {
+        height: 62px;
+    }
+    header nav ul {
+        display: flex; justify-content: center;
+        background: linear-gradient(180deg, #333b3f, #2e363a);
+        margin: 0 !important;
+    }
+    header nav .hea_menu li a {
+        padding: 0;
+        display: flex; justify-content: center;
+    }
+    header .hea_bottom {
+        display: none;
+    }
+    section {
+        width: 100%;
+        left: 0; top: 187px;
+    }
+    aside {
+        display: none;
+    }
+}
+
+@media (max-width:767px) {
+    header nav .hea_menu li:nth-of-type(4) {display: none;}
+    header nav .hea_menu li:nth-of-type(5) {display: none;}
+}
+
+header nav .hea_menu li {
+    width: 100%; height: 62px;
+    background: linear-gradient(180deg, #333b3f, #2e363a);
+    display: flex; justify-content: flex-end; align-items: center;
+    border-bottom: 1px solid #293034;
+    transition: .5s;
 }
