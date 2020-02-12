@@ -46,9 +46,6 @@ header .header_box > a{
 header .header_box nav {
     height: 100%;
 }
-header .header_box nav:hover .header_2depth {
-    display: block;
-}
 header .header_box nav .header_1depth {
     height: 100%;
     display: flex;
@@ -61,7 +58,7 @@ header .header_box nav .header_1depth > li > a {
     color: #333;
     font-size: 18px;
     font-weight: bold;
-    line-height: 94px;
+    line-height: 90px;
     padding: 0 50px;
 }
 
@@ -123,10 +120,8 @@ header .header_box .login form a {
 /*************** content ***************/
 
 .content {
-    height: 4318px;
     margin-top: 94px;
 }
-.con {}
 .con .top {
     height: 300px;
     display: flex; justify-content: center; align-items: center;
@@ -166,14 +161,12 @@ header .header_box .login form a {
     opacity: 1;
 }
 
-.con_01 {
-    height: 1536px;
-}
+
 .con_01 .top {
     background: url(../img/sub/img_sub01.jpg) no-repeat center;
 }
 .con_01 .main {
-    width: 1277px; height: 1122px;
+    width: 1277px;
     margin: 0 auto;
 }
 .con_01 .main_top {
@@ -210,6 +203,7 @@ header .header_box .login form a {
 
 .con_01 .main .bottom {
     text-align: center;
+    padding-bottom: 400px;
 }
 .con_01 .main .bottom > p {
     font-size: 30px;
@@ -262,27 +256,182 @@ header .header_box .login form a {
     line-height: 32px;
 }
 
-.con_02 {
-    height: 1197px;
-}
+
 .con_02 .top {
     background: url(../img/sub/img_sub02.jpg) no-repeat center;
 }
 .con_02 .main {
-    width: 1000px; margin: 0 auto;
+    width: 999px; margin: 0 auto 150px;
 }
-.con_02 .main ul {}
-.con_02 .main ul li {}
-.con_02 .main ul li a {}
-.con_02 .main ul li a p:first-of-type {}
-.con_02 .main ul li a p:last-of-type {}
-.con_03 {
-    height: 1585px;
+.con_02 .main ul {
+    width: 100%;
+    background: #354067;
+    border-radius: 50px;
+    display: flex; flex-wrap: wrap;
+    overflow: hidden;
 }
+.con_02 .main ul li {
+    width: 33.333333%; height: 200px;
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    display: flex; flex-direction: column; justify-content: flex-end; align-items: center;
+}
+.con_02 .main ul li:nth-of-type(3n) {
+    border-right: 0;
+}
+.con_02 .main ul li:hover {
+    background: #ffd617;
+}
+.con_02 .main ul li > p:last-of-type {
+    font-size: 18px;
+    color: #fff;
+    line-height: 30px;
+    margin: 20px 0 30px;
+}
+.con_02 .main ul li div, .con_02 .main ul li:last-of-type:hover > p {
+    display: none;
+}
+.con_02 .main ul li:last-of-type:hover div {
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+}
+.con_02 .main ul li div p {
+    font-size: 36px;
+    font-weight: bold;
+    color: #000;
+}
+.con_02 .main ul li div p span {
+    color: #f00;
+}
+.con_02 .main ul li div a {
+    font-size: 20px;
+    font-weight: bold;
+    border: 1px solid #000;
+    line-height: 37px;
+    padding: 0 23px;
+    margin: 30px 0;
+}
+
+
 .con_03 .top {
     background: url(../img/sub/img_sub03.jpg) no-repeat center;
 }
+.con_03 .main {
+    width: 860px;
+    margin: 0 auto;
+}
 
+.con_03 .main > ul {
+    width: 800px; height: 850px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+.con_03 .main > ul > li {
+    position: absolute;
+}
+.con_03 .main > ul > li:nth-of-type(1) {
+    left: 0;
+}
+.con_03 .main > ul > li:nth-of-type(2) {
+    left: 100%;
+}
+.con_03 .main > ul > li:nth-of-type(3) {
+    left: 200%;
+}
+.con_03 .main > ul > li > p {
+    width: 232px; height: 232px;
+    margin: 0 auto 100px;
+    background: #354067;
+    border-radius: 100%;   
+    color: #fff;
+    font-size: 30px;
+    font-weight: 800;
+    display: flex; justify-content: center; align-items: center;
+}
+.con_03 .main > ul > li .graph {}
+.con_03 .main > ul > li .graph ul {}
+.con_03 .main > ul > li .graph ul li {
+    display: flex; align-items: center;
+    margin-bottom: 100px;
+}
+.con_03 .main > ul > li .graph ul li:last-of-type {
+    margin: 0;
+}
+.con_03 .main > ul > li .graph ul li > p{
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+.con_03 .main > ul > li .graph ul li div {
+    position: relative;
+}
+.con_03 .main > ul > li .graph ul li:nth-of-type(1) div p:first-of-type {
+    width: 680px; height: 16px;
+    background: #354067;
+    border-radius: 50px;
+    position: relative;
+}
+.con_03 .main > ul > li .graph ul li:nth-of-type(2) div p:first-of-type {
+    width: 600px; height: 16px;
+    background: #354067;
+    border-radius: 50px;
+    position: relative;
+}
+.con_03 .main > ul > li .graph ul li:nth-of-type(3) div p:first-of-type {
+    width: 520px; height: 16px;
+    background: #354067;
+    border-radius: 50px;
+    position: relative;
+}
+.con_03 .main > ul > li .graph ul li:nth-of-type(4) div p:first-of-type {
+    width: 400px; height: 16px;
+    background: #354067;
+    border-radius: 50px;
+    position: relative;
+}
+.con_03 .main > ul > li .graph ul li div p:first-of-type span {
+    font-size: 16px;
+    font-weight: bold;
+    position: absolute; right: 20px; top: 0;
+    transform: translateY(-120%);
+}
+.con_03 .main > ul > li .graph ul li div p:last-of-type {
+    width: 50px; height: 50px;
+    background: #354067;
+    display: flex; justify-content: center; align-items: center;
+    border-radius: 100%;
+    position: absolute; right: -30px; top: -100%;
+}
+.con_03 .main > ul > li .graph ul li div p:last-of-type span {
+    width: 30px; height: 30px;
+    background: #fff;
+    border-radius: 100%;
+}
+
+.con_03 .main > div {
+    display: flex; justify-content: center;
+    margin-bottom: 192px;
+}
+.con_03 .main > div a {
+    margin-right: 15px;
+}
+.con_03 .main > div a:last-of-type {
+    margin: 0;
+}
+.con_03 .main > div a span{
+    display: block;
+}
+.con_03 .main > div a:nth-of-type(1) span {
+    width: 126px; height: 31px;
+    background: #ffd617;
+    border-radius: 100px;
+}
+.con_03 .main > div a:nth-of-type(2) span,
+.con_03 .main > div a:nth-of-type(3) span {
+    width: 31px; height: 31px;
+    background: #354067;
+    border-radius: 100%;
+}
 
 /* footer */
 

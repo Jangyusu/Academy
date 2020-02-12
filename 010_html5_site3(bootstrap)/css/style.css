@@ -18,7 +18,7 @@ header {
     background: #242b2e;
     padding: 0;
     box-shadow: 5px 5px 30px #000;
-    position: fixed; z-index: 1;
+    position: fixed; z-index: 999;
 }
 header .hea_top {
     height: 125px;
@@ -42,13 +42,13 @@ header nav {
     width: 100%; height: 372px;
 }
 header nav .hea_menu li {
-    width: 100%; height: 100%;
+    width: 100%; height: 62px;
     background: linear-gradient(180deg, #333b3f, #2e363a);
     display: flex; justify-content: flex-end; align-items: center;
-    border-bottom: 1px solid #293034;
     transition: .5s;
 }
-header nav .hea_menu li:hover {
+header nav .hea_menu li a:hover,
+header nav .hea_menu li a.selected {
     background: #1ab5b3;
 }
 header nav .hea_menu li a {
@@ -63,7 +63,7 @@ header nav .hea_menu li a {
 }
 
 header .hea_bottom {
-    height: 583px;
+    
 }
 header .hea_bottom .hea_text {
     height: 222px;
@@ -91,8 +91,8 @@ header .hea_bottom .hea_text ul li:hover a {
 }
 header .hea_bottom .hea_sns {
     padding-right: 25px;
-    margin: 28px 0 24px;
     text-align: end;
+    font-size: 0;
 }
 header .hea_bottom .hea_sns a {
     margin-top: 9px;
@@ -111,6 +111,7 @@ header .hea_bottom > p {
     font-size: 12px;
     color: #6b7072;
     text-align: end;
+    line-height: 60px;
 }
 
 
@@ -232,6 +233,156 @@ aside .inf .inf_text p svg path{
 }
 
 
+
+/* 버거메뉴 */
+.menu-trigger {
+	position: relative;
+	width: 50px;
+    height: 44px;
+    display: none;
+}
+
+.menu-trigger span {
+	display: inline-block;
+	transition: all .4s;
+	box-sizing: border-box;
+}
+
+.menu-trigger span {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 4px;
+	background-color: #fff;
+	border-radius: 4px;
+}
+
+.menu-trigger span:nth-of-type(1) {
+	top: 0;
+}
+
+.menu-trigger span:nth-of-type(2) {
+	top: 20px;
+}
+
+.menu-trigger span:nth-of-type(3) {
+	bottom: 0;
+}
+
+.menu-trigger.type7 span:nth-of-type(1) {
+	-webkit-animation : menu-bar07-01 .75s forwards;
+	animation : menu-bar07-01 .75s forwards;
+}
+@-webkit-keyframes menu-bar07-01 {
+	0% {
+		-webkit-transform : translateY(20px) rotate(45deg);
+	}
+	50% {
+		-webkit-transform : translateY(20px) rotate(0);
+	}
+	100% {
+		-webkit-transform : translateY(0) rotate(0);
+	}
+}
+@keyframes menu-bar07-01 {
+	0% {
+		transform : translateY(20px) rotate(45deg);
+	}
+	50% {
+		transform : translateY(20px) rotate(0);
+	}
+	100% {
+		transform : translateY(0) rotate(0);
+	}
+}
+.menu-trigger.type7 span:nth-of-type(2) {
+	transition : all .25s .25s;
+	opacity : 1;
+}
+.menu-trigger.type7 span:nth-of-type(3) {
+	-webkit-animation : menu-bar07-02 .75s forwards;
+	animation : menu-bar07-02 .75s forwards;
+}
+@-webkit-keyframes menu-bar07-02 {
+	0% {
+		-webkit-transform : translateY(-20px) rotate(-45deg);
+	}
+	50% {
+		-webkit-transform : translateY(-20px) rotate(0);
+	}
+	100% {
+		-webkit-transform : translateY(0) rotate(0);
+	}
+}
+@keyframes menu-bar07-02 {
+	0% {
+		transform : translateY(-20px) rotate(-45deg);
+	}
+	50% {
+		transform : translateY(-20px) rotate(0);
+	}
+	100% {
+		transform : translateY(0) rotate(0);
+	}
+}
+.menu-trigger.active-7 span:nth-of-type(1) {
+	-webkit-animation : active-menu-bar07-01 .75s forwards;
+	animation : active-menu-bar07-01 .75s forwards;
+}
+@-webkit-keyframes active-menu-bar07-01 {
+	0% {
+		-webkit-transform : translateY(0) rotate(0);
+	}
+	50% {
+		-webkit-transform : translateY(20px) rotate(0);
+	}
+	100% {
+		-webkit-transform : translateY(20px) rotate(45deg);
+	}
+}
+@keyframes active-menu-bar07-01 {
+	0% {
+		transform : translateY(0) rotate(0);
+	}
+	50% {
+		transform : translateY(20px) rotate(0);
+	}
+	100% {
+		transform : translateY(20px) rotate(45deg);
+	}
+}
+.menu-trigger.active-7 span:nth-of-type(2) {
+	opacity : 0;
+}
+.menu-trigger.active-7 span:nth-of-type(3) {
+	-webkit-animation : active-menu-bar07-02 .75s forwards;
+	animation : active-menu-bar07-02 .75s forwards;
+}
+@-webkit-keyframes active-menu-bar07-02 {
+	0% {
+		-webkit-transform : translateY(0) rotate(0);
+	}
+	50% {
+		-webkit-transform : translateY(-20px) rotate(0);
+	}
+	100% {
+		-webkit-transform : translateY(-20px) rotate(-45deg);
+	}
+}
+@keyframes active-menu-bar07-02 {
+	0% {
+		transform : translateY(0) rotate(0);
+	}
+	50% {
+		transform : translateY(-20px) rotate(0);
+	}
+	100% {
+		transform : translateY(-20px) rotate(-45deg);
+	}
+}
+
+/* media */
+
 @media (max-width:992px) {
     header {
         width: 100%; height: auto;
@@ -240,7 +391,7 @@ aside .inf .inf_text p svg path{
         height: 62px;
     }
     header nav ul {
-        display: flex; justify-content: center;
+        display: flex; justify-content: center; 
         background: linear-gradient(180deg, #333b3f, #2e363a);
         margin: 0 !important;
     }
@@ -248,27 +399,61 @@ aside .inf .inf_text p svg path{
         padding: 0;
         display: flex; justify-content: center;
     }
-    header .hea_bottom {
-        display: none;
-    }
     section {
         width: 100%;
         left: 0; top: 187px;
     }
+
     aside {
-        display: none;
+        position: static;
+    }
+    .menu-trigger {
+        display: block;
+        position: absolute; right: 3vw; top: 3vw;
+        z-index: 9;
+    }
+    .menu-trigger span {
+        background: #000;
     }
 }
 
-@media (max-width:767px) {
-    header nav .hea_menu li:nth-of-type(4) {display: none;}
-    header nav .hea_menu li:nth-of-type(5) {display: none;}
+@media (max-width:480px) {
+    header {
+        width: 100%; height: auto;
+    }
+    .active {
+        display: none;
+    }    
+    header nav h1 {
+        position: fixed;
+        width: 100%;
+    }
+    section {
+        width: 100%;
+        left: 0; top: 125px;
+    }
+    aside {
+        position: static;
+    }
+    .menu-trigger {
+        display: block;
+        position: absolute; right: 3vw; top: 3vw;
+        z-index: 9;
+    }
+    .menu-trigger span {
+        background: #000;
+    }
 }
 
-header nav .hea_menu li {
-    width: 100%; height: 62px;
-    background: linear-gradient(180deg, #333b3f, #2e363a);
-    display: flex; justify-content: flex-end; align-items: center;
-    border-bottom: 1px solid #293034;
-    transition: .5s;
+/* IE10 이상 */
+@media all and (-ms-high-contrast: none), (ms-high-contrast: active) {
+    header {
+        position: absolute !important;
+    }
+}
+
+@media print {
+    section {
+        display: none;
+    }
 }

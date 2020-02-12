@@ -18,17 +18,17 @@
                         <p><img src="img/logo.png" alt="" /></p>
                     </div>
                 </div>
-                <nav>
+                <nav class="active">
                     <ul class="hea_menu">
-                        <li><a href="">Home</a></li>
+                        <li><a href="index.html" class="selected">Home</a></li>
                         <li><a href="">Work</a></li>
                         <li><a href="">About</a></li>
                         <li><a href="">Blog</a></li>
                         <li><a href="">Services</a></li>
-                        <li><a href="">Contact</a></li>
+                        <li><a href="sub_contact.html">Contact</a></li>
                     </ul>
                 </nav>
-                <div class="hea_bottom">
+                <div class="hea_bottom active"">
                     <div class="hea_text">
                         <h3><span>Filter</span><i class="fab fa-windows"></i></h3>
                         <ul>
@@ -51,6 +51,11 @@
                     </div>
                     <p>© 2019 Kappe, All Rights Reserved</p>
                 </div>
+                <a class="menu-trigger type7" href="#">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
             </header>
             <section>
                 <div class="row">
@@ -214,5 +219,21 @@
             </aside>
         </div>
     </body>
+
+    <!-- 버거메뉴 -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script>
+        var burger = $(".menu-trigger");
+
+        burger.each(function(index) {
+            var $this = $(this);
+
+            $this.on("click", function(e) {
+                e.preventDefault();
+                $(this).toggleClass("active-7");
+                $("header nav, header .hea_bottom").toggleClass("active");
+            });
+        });
+    </script>
     <script src="https://kit.fontawesome.com/71dbb0a759.js" crossorigin="anonymous"></script>
 </html>

@@ -1,0 +1,116 @@
+<<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/bootstrap.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="shortcut icon" href="img/fcon.ico" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="wrap">
+            <header>
+                <div class="hea_top">
+                    <div class="hea_top_logo">
+                        <p>kappe</p>
+                        <p><img src="img/logo.png" alt="" /></p>
+                    </div>
+                </div>
+                <nav class="active">
+                    <ul class="hea_menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="">Work</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Blog</a></li>
+                        <li><a href="">Services</a></li>
+                        <li><a href="sub_contact.html" class="selected">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="hea_bottom active"">
+                    <div class="hea_text">
+                        <h3><span>Filter</span><i class="fab fa-windows"></i></h3>
+                        <ul>
+                            <li><a href="">All Works</a></li>
+                            <li><a href="">web design</a></li>
+                            <li><a href="">illustration</a></li>
+                            <li><a href="">photography</a></li>
+                            <li><a href="">wallpapers</a></li>
+                            <li><a href="">brochures</a></li>
+                        </ul>
+                    </div>
+                    <div class="hea_sns">
+                        <a href=""><img src="img/sns01.png" alt=""/></a>
+                        <a href=""><img src="img/sns02.png" alt=""/></a>
+                        <a href=""><img src="img/sns03.png" alt=""/></a>
+                        <a href=""><img src="img/sns04.png" alt=""/></a>
+                        <a href=""><img src="img/sns05.png" alt=""/></a>
+                        <a href=""><img src="img/sns06.png" alt=""/></a>
+                        <a href=""><img src="img/sns07.png" alt=""/></a>
+                    </div>
+                    <p>© 2019 Kappe, All Rights Reserved</p>
+                </div>
+                <a class="menu-trigger type7" href="#">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+            </header>>
+            <section>
+                <div id="map" style="width:100%;height:100vh;"></div>
+            </section>
+            <aside>
+                <div class="inf">
+                    <div class="inf_box">
+                        <a href=""><i class="fas fa-info-circle"></i></a>
+                    </div>
+                    <div class="inf_text">
+                        <p><i class="fas fa-phone-alt"></i>9930 1234 5679</p>
+                        <p><i class="fas fa-envelope"></i>contact@domain.com</p>
+                        <p><i class="fas fa-home"></i>street address example</p>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </body>
+    <script src="https://kit.fontawesome.com/71dbb0a759.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script>
+        var burger = $(".menu-trigger");
+
+        burger.each(function(index) {
+            var $this = $(this);
+
+            $this.on("click", function(e) {
+                e.preventDefault();
+                $(this).toggleClass("active-7");
+                $("header nav, header .hea_bottom").toggleClass("active");
+            });
+        });
+    </script>
+    <script type="text/javascript" src="http://dapi.kakao.com/v2/maps/sdk.js?appkey=9ee05ddf758dcffb30e3732b780d976c"></script>
+    <script>
+    var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+        mapOption = { 
+            center: new kakao.maps.LatLng(37.5004748,127.0272462), // 지도의 중심좌표
+            level: 3 // 지도의 확대 레벨
+        };
+
+    var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+    // 마커가 표시될 위치입니다 
+    var markerPosition  = new kakao.maps.LatLng(37.5004748,127.0272462); 
+
+    // 마커를 생성합니다
+    var marker = new kakao.maps.Marker({
+        position: markerPosition
+    });
+
+    // 마커가 지도 위에 표시되도록 설정합니다
+    marker.setMap(map);
+
+    // 아래 코드는 지도 위의 마커를 제거하는 코드입니다
+    // marker.setMap(null);    
+    </script>
+</html>
