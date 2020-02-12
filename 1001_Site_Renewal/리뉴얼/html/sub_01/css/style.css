@@ -220,9 +220,10 @@ header .header_box .login form a {
     width: 100%;
     display: flex; justify-content: space-between;
     border: 1px solid #7a7a7a;
+    position: relative;
 }
 .con_01 .main .bottom ul li {
-    width: 33.33%;
+    width: 33.33%;    
 }
 .con_01 .main .bottom ul li a {
     width: 100%;
@@ -233,22 +234,33 @@ header .header_box .login form a {
     border-right: 1px solid #7a7a7a;
     transition: .5s;
 }
+.con_01 .main .bottom ul li:last-of-type a {
+    border-right: none;
+}
 .con_01 .main .bottom ul li a:hover {
     color: #fff;
     background: #354067;
     border-right: 1px solid #343848;
 }
-.con_01 .main .bottom ul li:last-of-type a {
-    border-right: none;
-}
 .con_01 .main .bottom ul li .text {
-    display: none;
+    width: 100%;
+    display: none; flex-direction: column; align-items: center;
+    position: absolute; left: 0; top: 115px;
 }
 .con_01 .main .bottom ul li:hover .text {
-    display: block;
+    display: flex;
 }
-.con_01 .main .bottom ul li .text p:first-of-type {}
-.con_01 .main .bottom ul li .text p:last-of-type {}
+.con_01 .main .bottom ul li .text p:first-of-type {
+    width: 155px; height: 155px;
+    background: #354067;
+    border-radius: 100%;
+    display: flex; justify-content: center; align-items: center;
+    margin-bottom: 35px;
+}
+.con_01 .main .bottom ul li .text p:last-of-type {
+    font-size: 22px;
+    line-height: 32px;
+}
 
 .con_02 {
     height: 1197px;
@@ -256,6 +268,14 @@ header .header_box .login form a {
 .con_02 .top {
     background: url(../img/sub/img_sub02.jpg) no-repeat center;
 }
+.con_02 .main {
+    width: 1000px; margin: 0 auto;
+}
+.con_02 .main ul {}
+.con_02 .main ul li {}
+.con_02 .main ul li a {}
+.con_02 .main ul li a p:first-of-type {}
+.con_02 .main ul li a p:last-of-type {}
 .con_03 {
     height: 1585px;
 }
