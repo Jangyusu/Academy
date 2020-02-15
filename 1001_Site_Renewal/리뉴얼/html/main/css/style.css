@@ -104,6 +104,11 @@ header .header_box .login form a {
 }
 .visual a {
     opacity: 0.6;
+    transition: 0.3s;
+}
+.visual a:hover {
+    opacity: 0.8;
+    transform: scale(1.1);
 }
 
 /******* section *******/
