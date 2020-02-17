@@ -8,46 +8,55 @@
     </head>
 
     <body>
-        <header class="clearfix">
-            <div class="top flexbox">
-                <h1>
-                    <a href=""><img src="img/logo.png" alt=""/></a>
-                </h1>
+        <header>
+            <div class="header_box">
+                <a href="../main/index.html"><img src="img/img_logo.png" alt=""/></a>
                 <nav>
-                    <a href="">정보공개</a>
-                    <a href="">국민참여</a>
-                    <a href="">사업</a>
-                    <a href="">알림</a>
-                    <a href="">공사</a>
+                    <ul class="header_1depth">
+                        <li>
+                            <a href="../sub_01/index.html">정보공개</a>
+                            <ul>
+                                <li><a href="../sub_01/index.html">정보공개창구</a></li>
+                                <li><a href="../sub_01/index.html">공공데이터개방</a></li>
+                                <li><a href="../sub_01/index.html">부채내용</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="../sub_02/index.html">국민참여</a>
+                            <ul>
+                                <li><a href="../sub_02/index.html">문의하기</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="../sub_03/sub01.html">사업</a>
+                            <ul>
+                                <li><a href="../sub_03/sub01.html">사업지원</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="../sub_04/sub02.html">알림</a>
+                            <ul>
+                                <li><a href="../sub_04/sub02.html">관광시장정보</a></li>
+                                <li><a href="../sub_04/sub03.html">소식</a></li>
+                                <li><a href="../sub_04/sub04.html">갤러리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="../sub_05/sub05_1.html">공사</a>
+                            <ul>
+                                <li><a href="../sub_05/sub05_1.html">조직안내</a></li>
+                                <li><a href="../sub_05/sub05_2.html">시설안내</a></li>
+                            </ul>
+                        </li>
+                    </ul>
                 </nav>
                 <div class="login">
-                    <a href="">로그인</a>
-                    <a href="">회원가입</a>
-                    <a href=""><i class="fas fa-search"></i></a>
-                </div>
-            </div>
-            <div class="depth">
-                <div class="depthMenu">
-                    <ul>
-                        <li><a href="">정보공개창구</a></li>
-                        <li><a href="">공공데이터개방</a></li>
-                        <li><a href="">부채내용</a></li>
-                    </ul>
-                    <ul>
-                        <li><a href="">문의하기</a></li>
-                    </ul>
-                    <ul>
-                        <li><a href="">사업지원</a></li>
-                    </ul>
-                    <ul>
-                        <li><a href="">관광시장정보</a></li>
-                        <li><a href="">소식</a></li>
-                        <li><a href="">공고/공모</a></li>
-                    </ul>
-                    <ul>
-                        <li><a href="">조직안내</a></li>
-                        <li><a href="">시설안내</a></li>
-                    </ul>
+                    <a href="../login/login.html">로그인</a>
+                    <a href="../login/login.html">회원가입</a>
+                    <form action="">
+                        <input type="text" />
+                        <a href="#"><img src="img/icon_search.png" alt=""/></a>
+                    </form>
                 </div>
             </div>
         </header>
@@ -83,41 +92,43 @@
     </div>
         </section>
         <footer>
-            <div class="foot01">
-                <div class="flexbox">
-                    <ul class="clearfix">
-                        <li><a href="">개인정보처리방침</a></li>
-                        <li><a href="">저작권정책</a></li>
-                        <li><a href="">고객서비스현장</a></li>
-                        <li><a href="">전자우편무단수집거부</a></li>
-                        <li><a href="">헬프데스크</a></li>
-                        <li><a href="">고객의소리</a></li>
-                        <li><a href="">홈페이지불편신고</a></li>
-                    </ul>
-                    <div class="dropdown">
-                        <a href=""
-                            >관련사이트 바로가기<em><i class="fas fa-chevron-up"></i></em
-                        ></a>
-                        <div class="pop">
-                            <a href="">대한민국구석구석</a>
-                            <a href="">K-MICE</a>
-                            <a href="">걷기여행길</a>
-                            <a href="">Go Camping</a>
-                            <a href="">한국 크루즈 관광</a>
-                            <a href="">Tour API 3.0</a>
-                            <a href=""
-                                >관련사이트 바로가기<em><i class="fas fa-times"></i></em
-                            ></a>
-                        </div>
+            <div class="foo_top">
+                <div class="foo_all">
+                    <div class="foo_left">
+                        <ul>
+                            <li><a href="">개인정보처리방침</a></li>
+                            <li><a href="">저작권정책</a></li>
+                            <li><a href="">고객서비스현장</a></li>
+                            <li><a href="">전자우편 무단수집거부</a></li>
+                            <li><a href="">HELP DESK</a></li>
+                            <li><a href="">고객의소리</a></li>
+                            <li><a href="">홈페이지불편신고</a></li>
+                        </ul>
+                    </div>
+                    <div class="foo_right">
+                        <a href="">
+                            <p>관련사이트</p>
+                            <img src="img/icon_plus_white.png" />
+                        </a>
+                        <ul>
+                            <li><a href="">대한민국구석구석</a></li>
+                            <li><a href="">K-MICE</a></li>
+                            <li><a href="">걷기 여행길</a></li>
+                            <li><a href="">Go Camping</a></li>
+                            <li><a href="">한국 크루즈 관광 </a></li>
+                            <li><a href="">TourAPI 3.0</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
-            <div class="foot02">
-                <div class="flexbox">
-                    <p>
-                        우) 26464 강원도 원주시 세계로 10 TEL : (033)738-3000 사업자등록번호 : 202-81-50707 통신판매업신고 : 제 2009-서울중구-1234호
-                    </p>
-                    <p>Copyright &copy; 2007-2012 by KTO. ALL RIGHT RESERVED.</p>
+            <div class="bottom">
+                <div class="bot_content">
+                    <img src="img/img_bottom_logo.png" alt="" />
+                    <div class="bot_text">
+                        <p>26464 강원도 원주시 세계로 10 TEL : (033)738-3000 사업자등록번호 : 202-81-50707</p>
+                        <p>통신판매업신고 : 제 2009-서울중구-1234호</p>
+                        <p>Copyright © 2007-2012 by KTO. ALL RIGHT RESERVED.</p>
+                    </div>
                 </div>
             </div>
         </footer>

@@ -1,35 +1,21 @@
-html,body{
-    margin:0px;
-}
-*{
-    color:#bcbcbc;
-}
-ul,li{
-    list-style-type: none;
+html, body, ul, li, p, h1, h2, h3, h4, h5, h6 {
+    padding: 0;
+    margin: 0;
 }
 a{
-    color:#000;
-    text-decoration: none;
+    text-decoration-line: none;
+    display: inline-block;
+    color: inherit;
 }
-span,em,strong,a{display: inline-block;}
+ul, li {
+    list-style-type: none;
+    /* display: inline-block; */
+}
+img {
+    font-size: 0;
+    vertical-align: top;
+    display: inline-block;
+}
 *{
-    margin:0;padding:0;
-    font-family: 'NanumSquare', sans-serif;
-    font-size:16px;
-    line-height: 27px;
-    color:#000;
-    font-weight: normal;
-    box-sizing:border-box;
-    /*
-        border 또는 padding 넣어주면 
-        width,height값이 변경됨
-    
-        box-sizing:border-box는 이러한 문제점을
-        해결해줌 (width,height 값이 변경 안됨)
-    */
-    
+    box-sizing: border-box;
 }
-
-
-
-

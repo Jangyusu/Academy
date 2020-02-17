@@ -513,6 +513,11 @@ footer .foo_top .foo_all .foo_right > ul li {
 footer .foo_top .foo_all .foo_right > ul li a {
     font-size: 16px;
     line-height: 30px;
+    background: #fff;
+    opacity: .8;
+}
+footer .foo_top .foo_all .foo_right > ul li a:hover {
+    opacity: 1;
 }
 
 
