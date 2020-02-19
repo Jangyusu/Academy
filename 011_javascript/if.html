@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            document.write("<h1>if(조건문)</h1>");
+
+            var a = 40,
+                b = 100,
+                avg = a + b / 2,
+                grap;
+
+            if (avg >= 60) {
+                if (a >= 40 && b >= 40) {
+                    grap = "합격";
+                } else {
+                    grap = "불합격";
+                }
+            } else {
+                grap = "불합격";
+            }
+
+            document.write(grap);
+
+            if (avg >= 90) {
+                grap = "A";
+            } else if (avg >= 80) {
+                grap = "B";
+            } else if (avg >= 70) {
+                grap = "C";
+            } else if (avg >= 60) {
+                grap = "D";
+            } else if (avg >= 50) {
+                grap = "E";
+            }
+
+            document.write("<br> 평균" + avg + "점 " + grap + "등급");
+
+            var a = prompt("국어점수는 몇점인가요?"),
+                b = prompt("영어점수는 몇점인가요?"),
+                c = prompt("이름이 무엇인가요?");
+            (a = parseInt(a)), (b = parseInt(b));
+
+            document.write("<h1>Prompt</h1>");
+
+            // 1. prompt를 이용하여 이름을 받는다.
+            // 2. 받은 이름이 홍길동이라면 점수를 보여준다.
+
+            if (c === "홍길동") {
+                document.write("<br> 국어:" + a + "점 / 영어:" + b + "점"); // Number(a) a를 문자열을 숫자로 변환,
+                document.write("<br> 총점:" + (a + b) + "점 / 평균:" + (a + b) / 2 + "점"); // parseInt(a) a의 뒤에오는 문자열은 버리고 숫자만 가져온다.
+            } else {
+                alert("홍길동이 아닙니다.");
+                document.write("<br> 공부하세요");
+            }
+        </script>
+    </body>
+</html>

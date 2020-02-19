@@ -7,10 +7,13 @@
     </head>
     <body>
         <script>
-            var kor = 80,
-                eng = 70;
+            var hong = {
+                kor: 80,
+                eng: 70
+            };
 
-            document.write("홍길동님의 총점:" + kor + " / " + "평균:" + eng + "점");
+            var sum = hong.kor + hong.eng;
+            document.write("홍길동님의 총점:" + sum + " / 평균:" + sum / 2 + "점");
         </script>
     </body>
 </html>
