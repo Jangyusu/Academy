@@ -129,6 +129,7 @@ header .header_box .login form a {
 
 .content {
     margin-top: 94px;
+    
 }
 .con .top {
     height: 300px;
@@ -157,21 +158,20 @@ header .header_box .login form a {
 }
 .con > ul li a::after {
     content: "";
-    width: 0%; height: 2px;
+    width: 100%; height: 2px;
     background: #333;
     display: block;
     margin-top: 5px;
-    opacity: 0;
     transition: .5s;
+    opacity: 0;
 }
 .con > ul li a:hover::after {
-    width: 100%;
     opacity: 1;
 }
 
-
 .con_01 .top {
     background: url(../img/sub/img_sub01.jpg) no-repeat center;
+    transition: .5s;
 }
 .con_01 .main {
     width: 1277px;
@@ -264,7 +264,9 @@ header .header_box .login form a {
     line-height: 32px;
 }
 
-
+.con_02 {
+    margin: 300px auto;
+}
 .con_02 .top {
     background: url(../img/sub/img_sub02.jpg) no-repeat center;
 }
