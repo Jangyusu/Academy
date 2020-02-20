@@ -10,16 +10,14 @@
             //while
             document.write("<h1>while 1~100까지의 홀수의 개수를 구하라</h1>");
 
-            var num = 0,
-                hole = 0;
+            var num = 0;
+            var num2 = [3, 6, 9];
             while (num <= 100) {
-                if (num % 2 === 1) {
-                    hole++;
-                    console.log(hole);
+                if (num % 10 === 3 || num % 10 === 6 || num % 10 === 9) {
+                    document.write("<br>" + num);
                 }
                 num++;
             }
-            document.write(hole);
         </script>
     </body>
 </html>
