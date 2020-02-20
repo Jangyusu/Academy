@@ -10,16 +10,12 @@
             document.write("<h1>ex01-if 조건문 활용</h1>");
             //스스로 생각하기!!!!!
 
-            var a = prompt("내가 좋아하는 영화는 무엇일까요?");
-
-            if (a === "Inception") {
-                alert("드디어 정답입니다. 축하합니다.");
-            } else if (a === "인셉션") {
-                alert("아쉽게 틀렸습니다. 하지만 영어로 입력한다면 정답입니다.");
-            } else if (a === "inception") {
-                alert("또 아쉽게 틀렸습니다. 첫 단어를 대문자로 입력한다면 Real정답입니다.");
+            var a = prompt("좋아하는 숫자는?");
+            a = parseInt(a);
+            if (a % 2 === 0) {
+                document.write(a + "는 짝수입니다.");
             } else {
-                alert("틀렸습니다. 힌트 : 크리스토퍼 놀란 감독의 명작 중 하나입니다.");
+                document.write(a + "는 홀수입니다.");
             }
         </script>
     </body>
