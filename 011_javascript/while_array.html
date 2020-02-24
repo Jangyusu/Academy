@@ -10,8 +10,8 @@
             document.write("<h1></h1>");
 
             var arr = [10, 20, 80, 40, 70],
-                i = 0,
-                sum = 0;
+                sum = 0,
+                avg = 0;
 
             // while (i < arr.length) {
             //     document.write(arr[i] + "<br>");
@@ -21,10 +21,10 @@
             // document.write("총 합 = " + sum);
 
             for (var i = 0; i < arr.length; i++) {
-                document.write(arr[i] + "<br>");
                 sum += arr[i];
             }
-            document.write("총 합 = " + sum);
+            avg = sum / arr.length;
+            document.write("총 점 = " + sum + "<br>" + "평균 = " + avg);
         </script>
     </body>
 </html>
