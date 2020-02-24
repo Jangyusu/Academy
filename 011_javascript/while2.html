@@ -11,9 +11,8 @@
             document.write("<h1>while 뒷자리가 3,6,9 인것들만 구하라</h1>");
 
             var num = 0;
-            var num2 = [3, 6, 9];
             while (num <= 100) {
-                if (num % 10 === 3 || num % 10 === 6 || num % 10 === 9) {
+                if ((num % 10) % 3 === 0 && num % 10 !== 0) {
                     document.write("<br>" + num);
                 }
                 num++;
