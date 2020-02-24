@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            document.write("<h1>홀수와 짝의 합을 구하시오</h1>");
+
+            var num = 0,
+                sum = 0,
+                sum2 = 0;
+
+            while (num <= 100) {
+                if (num % 2 === 1) {
+                    sum += num;
+                } else {
+                    sum2 += num;
+                }
+                num++;
+            }
+            document.write("<br> 0부터 100까지 홀수의 합은 " + sum + " 입니다.");
+            document.write("<br> 0부터 100까지 짝수의 합은 " + sum2 + " 입니다.");
+        </script>
+    </body>
+</html>
