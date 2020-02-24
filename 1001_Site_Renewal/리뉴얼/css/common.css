@@ -1,25 +1,45 @@
-/********** common **********/
 
-html, body, ul, li, p, h1, h2, h3, h4, h5, h6 {
-    padding: 0;
-    margin: 0;
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800&display=swap&subset=korean');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&display=swap&subset=korean');
+
+html,body{
+    margin:0px;
+}
+*{
+    color:#bcbcbc;
+    font-size:16px;
+}
+ul,li{
+    list-style-type: none;
 }
 a{
-    text-decoration-line: none;
-    display: inline-block;
-    color: inherit;
+    color:#000;
+    text-decoration: none;
 }
-ul, li {
-    list-style-type: none;
-    /* display: inline-block; */
+span,em,strong,a{display: inline-block;}
+*{
+    margin:0;padding:0;
+    font-family: 'Nanum Gothic' ; 
+    font-size:16px;
+    line-height: 27px;
+    color:#000;
+    font-weight: normal;
+    box-sizing:border-box;    
+}
+
+em {
+    font-style: normal;
+}
+.clearfix:after{
+    content: '';
+    clear: both;
+    display: block;
 }
 img {
     font-size: 0;
     vertical-align: top;
     display: inline-block;
-}
-*{
-    box-sizing: border-box;
 }
 
 /********** header **********/
@@ -68,7 +88,7 @@ header .header_box nav .header_1depth > li:hover > a {
 header .header_box nav .header_1depth > li > a {
     width: 100%;
     color: #333;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: bold;
     line-height: 94px;
     padding: 0 50px;
@@ -81,7 +101,7 @@ header .header_box nav:hover .header_1depth > li > ul {
     display: block;
 }
 .header_1depth > li > ul li a {
-    font-size: 15px;
+    font-size: 0.9375rem;
     color: #fff;
     line-height: 20px;
     margin: 25px 0;
@@ -107,7 +127,7 @@ header .header_box .login {
 }
 header .header_box .login a {
     display: block;
-    font-size: 14px;
+    font-size: 0.875rem;
     color: #333;
 }
 header .header_box .login form {
@@ -167,7 +187,7 @@ footer .foo_top .foo_all .foo_left ul li:last-of-type::after {
 }
 footer .foo_top .foo_all .foo_left ul li a {
     color: #ccc;
-    font-size: 14px;
+    font-size: 0.875rem;
     line-height: 54px;
 }
 footer .foo_top .foo_all .foo_left ul li a:hover {
@@ -178,12 +198,12 @@ footer .foo_top .foo_all .foo_right {
 }
 footer .foo_top .foo_all .foo_right > a {
     display: flex; justify-content: center; align-items: center;
-    font-size: 14px;
+    font-size: 0.875rem;
     height: 100%;
 }
 footer .foo_top .foo_all .foo_right > a p {
     color: #ccc;
-    font-size: 16px;
+    font-size: 1rem;
 }
 footer .foo_top .foo_all .foo_right > a img {
     margin-left: 5px;
@@ -202,7 +222,7 @@ footer .foo_top .foo_all .foo_right > ul li {
     text-align: end;
 }
 footer .foo_top .foo_all .foo_right > ul li a {
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 30px;
     background: #fff;
     opacity: .8;
@@ -231,6 +251,6 @@ footer .bot_text {
     display: flex; flex-direction: column; justify-content: space-between;
 }
 footer .bot_text p {
-    font-size: 14px;
+    font-size: 0.875rem;
     color: #ccc;
 }
