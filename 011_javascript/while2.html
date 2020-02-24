@@ -10,10 +10,15 @@
             //while
             document.write("<h1>while 뒷자리가 3,6,9 인것들만 구하라</h1>");
 
-            var num = 0;
-            while (num <= 100) {
+            var num = 1;
+            while (num < 101) {
+                if (num % 10 === 0) {
+                    document.write("<br>");
+                }
                 if ((num % 10) % 3 === 0 && num % 10 !== 0) {
-                    document.write("<br>" + num);
+                    document.write("* / ");
+                } else {
+                    document.write(num + " / ");
                 }
                 num++;
             }
