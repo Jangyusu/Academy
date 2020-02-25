@@ -15,6 +15,10 @@ body {
     text-align: center;
     min-height: 100%;}
 
+    #content.active .message {
+        color: #f00;
+    }
+
 #content {
     background-color: #fff;
     border: 3px double #31373f;
