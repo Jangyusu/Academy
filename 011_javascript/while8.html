@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            document.write("<h1>아래 화면을 화면에 출력해 주세요.</h1>");
+            document.write("<h3>1문제 - 1/2/3/4/5/6/7/8/9/10</h3><br>");
+
+            var num = 0;
+
+            while (num < 10) {
+                num++;
+                if (num !== 10) {
+                    document.write(num + " / ");
+                } else {
+                    document.write(num);
+                }
+            }
+
+            document.write("<h3>2문제 - 1~100까지의 합을 구하시오.</h3><br>");
+
+            var num = 0,
+                sum = 0;
+
+            while (num < 100) {
+                num++;
+                sum += num;
+            }
+            document.write("1~100까지의 총 합은 " + sum + "입니다.");
+
+            document.write("<h3>3문제 - 배열 [10,50,60,80,70,60]을 선언하시오</h3><br>");
+
+            var num = 0,
+                num2 = 0,
+                num3 = 0,
+                nums = [10, 50, 60, 80, 70, 60],
+                sum = 0;
+
+            while (num < nums.length) {
+                sum += nums[num];
+                if (nums[num] > 60) {
+                    num2++;
+                } else if (nums[num] < 70) {
+                    num3++;
+                }
+                num++;
+            }
+            document.write("선언된 배열값의 합은 " + sum + "입니다.<br>");
+            document.write("60보다 큰 수의 갯수는 " + num2 + "개 입니다.<br>");
+            document.write("70보다 작은 수의 갯수는 " + num3 + "개 입니다.<br>");
+
+            document.write("<h3>4문제 - (for문 활용) 배열 ['a','b','c','d']값의 길이를 구하시오</h3><br>");
+            var nums = ["a", "b", "c", "d"];
+            document.write("배열의 길이는 " + nums.length + "입니다.<br>");
+            for (var i = 0; i < nums.length; i++) {
+                if (nums[i] == "c") {
+                    document.write("지금 c를 출력합니다.<br>");
+                } else {
+                    document.write("지금은 c가 아닙니다.<br>");
+                }
+            }
+        </script>
+    </body>
+</html>
