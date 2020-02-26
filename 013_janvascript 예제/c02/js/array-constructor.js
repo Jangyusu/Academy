@@ -29,9 +29,15 @@ colors = colors.concat(font);
 colors = colors.reverse();
 // 배열을 역순으로 재배치
 
-colors = colors.slice(0, 2);
+colors2 = [10, 20, 30, 40].slice(0, 3);
+// a번째에서 b번째 까지 자름
+
+colors3 = [10, 20, 30, 40].splice(0, 3);
+//배열값을 추가하거나 제거하여 반환
 
 console.log(colors);
+console.log(colors2);
+console.log(colors3);
 
 /* 
 NOTE: textContent does not work in IE8 or earlier
