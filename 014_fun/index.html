@@ -9,13 +9,19 @@
         <script>
             document.write("<h1>함수(function)</h1>");
 
-            function fun(x) {
-                var i = 0;
-                while (i++ < x) {
-                    document.write("hello<br>");
+            // function fun(x, y) {
+            //     document.write(x + y);
+            // }
+            // fun(10, 20);
+            var sum = "홍길순";
+            function fun5(name, ...arr) {
+                var sum = 0;
+                for (var i in arr) {
+                    sum += arr[i];
                 }
+                document.write("<br>" + name + "의 점수는 " + sum + "점입니다.");
             }
-            fun(10);
+            fun5("홍길동", 80, 70, 60, 80, 90);
         </script>
     </body>
 </html>
