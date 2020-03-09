@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            var i = 0,
+                arr = [];
+
+            while (++i <= 45) {
+                var num = Math.ceil(Math.random() * 45);
+                check(num);
+            }
+            function check(n) {
+                var bln = true;
+
+                for (var k in arr) {
+                    if (arr[k] === n) {
+                        bln = false;
+                        i--;
+                        break;
+                    }
+                }
+                if (bln) arr.push(n);
+            }
+
+            var fun = function() {
+                console.log("함수표현식");
+            };
+        </script>
+    </body>
+</html>
