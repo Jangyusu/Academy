@@ -1,0 +1,59 @@
+
+
+
+<style>
+    html,body{margin:0;}
+    nav{
+        background:#000;
+        position:absolute; left:0; top:0;
+        color:#fff;
+        width:100%;
+    }
+    div{height:100vh; text-align:center;}
+    div:nth-of-type(2){
+        background:yellow;
+    }
+</style>
+
+<nav>
+    <a data-id="0">navi01</a>
+    <a data-id="1">navi02</a>
+</nav>
+
+<div class="con1"> con1 </div>
+<div class="con2"> con2 </div>
+
+
+<script>
+    var idx = 0;
+    var nav = document.querySelector('nav');
+    var con1 = document.querySelector('.con1');
+    var con2 = document.querySelector('.con2');
+   
+    nav.addEventListener('click',function(e){
+        e.preventDefault();
+        
+        //console.log(e.target.dataset);
+        var id = e.target.dataset.id;
+        
+        
+        //window.scrollTo(0,eval(con+(id+1)).offsetTop);
+        
+        
+        
+        
+    });
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</script>

@@ -8,18 +8,79 @@
 
     <body>
         <div class="slide">
-            <ul>
-                <li><img src="img/img-01.jpg" /></li>
-                <li><img src="img/img-02.jpg" /></li>
-                <li><img src="img/img-03.jpg" /></li>
+            <ul class="slide_ani">
+                <li class="s_bn"><img src="img/img-01.jpg" /></li>
+                <li class="s_bn"><img src="img/img-02.jpg" /></li>
+                <li class="s_bn"><img src="img/img-03.jpg" /></li>
             </ul>
-            <p>
-                <a>prev</a>
-                <a>next</a>
+            <!--
+    <div class="slide_ani"> 
+        <img class="s_bn" src="">
+        <img class="s_bn" src="">
+        <img class="s_bn" src="">
+    </div>
+    -->
+
+            <p class="btn">
+                <a class="prev">prev</a>
+                <a class="next">next</a>
             </p>
+            <div class="indi"></div>
         </div>
 
-        <script></script>
+        <script>
+            var slide = document.querySelector(".slide");
+            var slideAni = slide.querySelector(".slide_ani"); //ul
+            var banners = slide.querySelectorAll(".s_bn"); //li
+
+            var prevBtn = slide.querySelector(".prev");
+            var nextBtn = slide.querySelector(".next");
+            var bannerLen = banners.length;
+            var indi = "";
+            var indiTag = slide.querySelector(".indi");
+
+            var firstClone = banners[0].cloneNode(true);
+            var lastClone = banners[2].cloneNode(true);
+
+            console.log(firstClone);
+            console.log(lastClone);
+
+            for (var i = 0; i < bannerLen; i++) {
+                banners[i].style.left = 100 * i + "%";
+                indi += "<a></a>";
+            }
+            indiTag.innerHTML = indi;
+
+            var idx = 0;
+            nextBtn.addEventListener("click", function() {
+                ++idx;
+                slideAnimate();
+            });
+
+            prevBtn.addEventListener("click", function() {
+                --idx;
+                slideAnimate();
+            });
+
+            function slideAnimate() {
+                slideAni.style.left = -100 * idx + "%";
+                update();
+            }
+            function update() {
+                if (idx == 0) {
+                    prevBtn.style.display = "none";
+                } else {
+                    prevBtn.style.display = "block";
+                }
+
+                if (idx == bannerLen - 1) {
+                    nextBtn.style.display = "none";
+                } else {
+                    nextBtn.style.display = "block";
+                }
+            }
+            slideAnimate();
+        </script>
 
         <style>
             * {
@@ -38,12 +99,19 @@
                 margin: 0;
                 padding: 0;
                 list-style: none;
+                left: 0;
                 transition: 0.5s;
             }
             .slide ul li {
                 width: 100%;
                 position: absolute;
             }
+
+            /*
+    .slide ul li:nth-of-type(2){left:100%}
+    .slide ul li:nth-of-type(3){left:200%}
+    */
+
             .slide ul li img {
                 width: 100%;
                 height: 300px;
@@ -80,6 +148,18 @@
             .slide p a:last-child:after {
                 content: ">";
                 font-size: 30px;
+            }
+            .indi {
+                position: absolute;
+                bottom: 10px;
+                left: 50%;
+                z-index: 3;
+            }
+            .indi a {
+                width: 15px;
+                height: 15px;
+                background: #000;
+                display: inline-block;
             }
         </style>
     </body>
