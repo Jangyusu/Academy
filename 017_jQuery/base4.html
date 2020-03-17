@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+            //start
+            var imgArry = [
+                "../016_DomContral/img/img-01.jpg",
+                "../016_DomContral/img/img-02.jpg",
+                "../016_DomContral/img/img-03.jpg"
+            ]
+
+            var tag = "<img src=" + imgArry[0] + ">";
+            tag += "<img src=" + imgArry[1] + ">";
+            tag += "<img src=" + imgArry[2] + ">";
+
+            $(".each").append(tag);
+
+            $(".each img").each(function (i) {
+                $(this).delay(500 * i).fadeIn();
+            });
+
+            $(".pop").hide();
+            $(".each img").on("click", function () {
+                var src = $(this).attr("src");
+
+                $(".pop").fadeIn();
+                $(".pop img").attr("src", src);
+            });
+            $(".pop").on("click", function () {
+                $(".pop").fadeOut();
+            })
+
+            //end
+        })
+    </script>
+</head>
+
+<body>
+
+    <div class="each"></div>
+    <div class="pop"><img src=""></div>
+
+    <style>
+        img {
+            width: 600px;
+            height: 400px;
+            display: none;
+        }
+
+        .pop {
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            position: fixed;
+            left: 0;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .pop img {
+            display: block;
+        }
+
+        .each {
+            display: flex;
+        }
+    </style>
+
+</body>
+
+</html>
