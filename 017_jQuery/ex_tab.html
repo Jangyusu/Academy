@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+</head>
+
+<body>
+    <style>
+        html,
+        body {
+            margin: 0;
+        }
+
+        section {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            text-align: center;
+        }
+
+        .s1 {
+            width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .s1 div {
+            width: 30%;
+            height: 200px;
+            font-size: 3em;
+            background: #ddd;
+            margin-top: 40px;
+        }
+
+        button {
+            font-size: 2em;
+        }
+    </style>
+
+    <section>
+
+        <p>
+            <button>All</button>
+            <button>red</button>
+            <button>yellow</button>
+            <button>blue</button>
+        </p>
+        <div class="s1">
+            <div>blue</div>
+            <div>yellow</div>
+            <div>red</div>
+            <div>yellow</div>
+            <div>blue</div>
+            <div>red</div>
+            <div>yellow</div>
+            <div>red</div>
+            <div>blue</div>
+            <div>yellow</div>
+            <div>red</div>
+            <div>red</div>
+        </div>
+
+    </section>
+
+
+    <script>
+        var $all = $(".s1 div"),
+            $red = $(".s1 div:contains(red)"),
+            $yellow = $(".s1 div:contains(yellow)"),
+            $blue = $(".s1 div:contains(blue)"),
+            $button = $("button");
+
+        $all.hide();
+
+        $button.on("click", function () {
+            var $thisTxt = $(this).text();
+
+            if ($thisTxt == "All") {
+                $all.show(2500)
+            } else if ($thisTxt == "red") {
+                $red.show(2500).siblings().not($red).hide(2500);
+            } else if ($thisTxt == "yellow") {
+                $yellow.show(2500).siblings().not($yellow).hide(2500);
+            } else {
+                $blue.show(2500).siblings().not($blue).hide(2500);
+            }
+
+        })
+
+    </script>
+
+
+
+</body>
+
+</html>
