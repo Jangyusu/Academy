@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+</head>
+
+<body>
+    <section>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+
+    <style>
+        div {
+            width: 400px;
+            height: 500px;
+            background: #aaa;
+            margin: 100px auto 0;
+            opacity: 0;
+            transition: 1s;
+        }
+
+        div.active {
+            opacity: 1;
+            margin: 0 auto 0;
+        }
+    </style>
+
+</body>
+
+
+
+<script>
+
+    $(function () {
+        //start
+
+        var sTop = 0;
+
+        $(window).on("scroll", function () {
+            var winH = $(window).height();
+            sTop = $(this).scrollTop();
+
+            $("div").each(function (i) {
+                var con = $("div").eq(i).offset().top;
+
+                if ((con - winH) < sTop) {
+                    $("div").eq(i).addClass("active");
+                } else {
+                    $("div").eq(i).removeClass("active");
+                }
+            })
+
+
+
+        })
+
+        //윈도우 scroll 이벤트 강제 발생
+        $(window).trigger("scroll");
+
+        //end
+    })
+
+</script>
+
+
+
+
+
+</html>
