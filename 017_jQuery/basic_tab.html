@@ -32,40 +32,37 @@
         transition:.5s;
     }
     button{font-size:2em;}
-  
-   
-   
 </style>
 
+<script>
+$(function(){
+    //document ready
+    $('p button').on('click',function(){
+        var idx = $(this).index();
+        
+        $('.s1 div').eq(idx).show()
+        .siblings().hide();
+    });
+    //end
+});
+</script>
+
 <section>
-    
     <p>
-        <button>All</button>
-        <button>red</button>
-        <button>yellow</button>
-        <button>blue</button>
+        <button>All</button>    0
+        <button>red</button>    1
+        <button>yellow</button> 2
+        <button>blue</button>   3
     </p>
     <div class="s1">
-        <div>blue</div>
-        <div>yellow</div>
-        <div>red</div>
-        <div>yellow</div>
-        <div>blue</div>
-        <div>red</div>
-        <div>yellow</div>
-        <div>red</div>
-        <div>blue</div>
-        <div>yellow</div>
-        <div>red</div>
-        <div>red</div>
-    </div>
-    
+        <div>all</div>    0
+        <div>red</div>    1
+        <div>yellow</div> 2
+        <div>blue</div>   3
+    </div>    
 </section>
 
 
-<script>
-
-</script>
 
 
 
