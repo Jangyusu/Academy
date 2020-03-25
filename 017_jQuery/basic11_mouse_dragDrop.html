@@ -17,15 +17,23 @@ $(function () {
         axis, revert, containment
     */
     $('.drag').draggable({
-//        axis:'y',
-//        revert : true,
+        containment : '.drop',
         start :function(){console.log('start')},
         drag :function(){console.log('drag')},
         stop :function(){console.log('stop')}
     });
     
+    $('.drop').droppable({
+        accept : $('.drag'), //대상자
+        hoverClass : 'active',
+        drop : function(){
+            $(this).append($('.drag')); 
+            //선택자안으로 이동
+        }
+    });
     
-    $('.drop').droppable();
+    
+    //tolerance:'intersect',
     
     
     
@@ -55,6 +63,7 @@ $(function () {
         border:1px solid #000;
         background:#f00;
     }
+    .active {background:yellow;}
 </style>
   
 
