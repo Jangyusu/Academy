@@ -1,0 +1,13 @@
+header,
+footer,
+section {
+    transform: translateY(2%);
+    opacity: 0;
+    transition: .5s;
+}
+body.active header,
+body.active footer,
+body.active section {
+    transform: translateY(0);
+    opacity: 1;
+}
