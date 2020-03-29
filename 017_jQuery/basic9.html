@@ -14,20 +14,26 @@
 
             $(window).on('scroll', function () {
                 var winH = $(window).height();
+
+
                 sTop = $(this).scrollTop();
+
+                for (var i = 0; i < document.querySelectorAll("div").length; i++) {
+                    var a = document.querySelectorAll("div")[i].offsetTop;
+                }
 
                 $('div').each(function (i) {
                     var con = $('div').eq(i).offset().top;
 
                     if (con - winH < sTop) {
-                        $("div").eq(i).addClass("active");
-                    } else {
-                        $("div").eq(i).removeClass("active");
+
+                        $('div').eq(i).css({
+                            opacity: 1,
+                            marginTop: 100
+                        });
                     }
                 });
-
             });
-
             //윈도우 scroll 이벤트 발생
             //dispatchEvent()
             $(window).trigger('scroll');
@@ -63,15 +69,10 @@
             background: #aaa;
 
             margin: 0 auto;
-            margin-top: 100px;
+            margin-top: 200px;
 
             opacity: 0;
             transition: 1s;
-        }
-
-        div.active {
-            opacity: 1;
-            margin-top: 5px;
         }
     </style>
 
