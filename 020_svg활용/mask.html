@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <img src="../011_javascript/img/img-01.jpg" alt="">
+
+    <svg width="300" height="300">
+        <text x="0" y="100" font-size="100">
+            AOA
+        </text>
+        <image xlink:href="../011_javascript/img/img-01.jpg"></image>
+    </svg>
+
+    <style>
+        img {
+            clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+            transform: translateX(0);
+            animation: a 2s infinite;
+        }
+
+        @keyframes a {
+            50% {
+                clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 63% 100%, 89% 49%, 62% 0);
+                transform: translateX(100%);
+            }
+
+            100% {
+                clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+                transform: translateX(0);
+            }
+
+        }
+    </style>
+</body>
+
+</html>
