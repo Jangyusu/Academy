@@ -1,0 +1,31 @@
+$color : #ccc;
+
+@mixin after($dis) {
+    &:after{
+        content: "";
+        clear: both;
+        display: $dis;
+    }
+}
+
+html, body {
+    margin: 0;
+    background: #fff;
+}
+
+header {
+    background: $color;
+    @include after(inline);
+
+    h1 {
+        font-size: 2em;
+        float: left;
+    }
+    nav {
+        float: right;
+
+        a {
+            display: inline-block;
+        }
+    }
+}
