@@ -10,9 +10,28 @@
 
 <body>
     <!--
+
         1. style.scss생성
         2. css작업
         3. sass 컴파일 -> style.css
+
+
+
+        1. 컨포너트별 css작성
+        2. 변수 선언($변수명:값)
+        3. @mixin aa(){재실행코드}
+            @include aa();
+        4. %aa{다중선택자에 동일한 명령}
+            @extend %aa;
+        5.@import "파일명";(scss파일 호출);
+        6._common.scss -> css파일로 컴파일하지 않음
+
+
+        @for $i from 1 to 4 {
+            nav a:nth-of-type(#{$i}){
+            font-size:$i * 2;
+        } //반복문
+}
     -->
 
     <header>

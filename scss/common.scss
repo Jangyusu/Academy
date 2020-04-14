@@ -2,7 +2,9 @@
     list-style-type: none;
 }
 
-
+%ul {
+    list-style-type: none;
+}
 /* common */
 html, body, dl, dt {
     margin: 0;
@@ -21,12 +23,9 @@ p, span {
     word-break: keep-all;
 }
 
-ul {
-    @extend %listType;
-}
-
+ul {}
 li {
-    @extend %listType;
+    @extend %ul;
 }
 
 dt, dd {
