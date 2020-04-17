@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box; }
+
+html, body {
+  margin: 0; }
+
+figure, figcaption {
+  margin: 0;
+  padding: 0; }
+
+section {
+  width: 100%; }
+  section .container {
+    width: 1200px;
+    margin: 0 auto; }
+
+.list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  .list figcaption {
+    width: 40%; }
+    .list figcaption b {
+      font-size: 2em; }
+    .list figcaption p {
+      font-size: 1.2em;
+      line-height: 1.6em; }
+    .list figcaption i {
+      font-style: normal; }
+  .list > p {
+    width: 50%;
+    overflow: hidden; }
+    .list > p img {
+      width: 100%;
+      transition: .5s; }
+  .list:hover img {
+    transform: scale(1.2); }
+  .list:nth-of-type(1) b:before {
+    content: '';
+    display: inline-block;
+    width: 50%;
+    height: 2px;
+    background: #000;
+    vertical-align: middle; }
+  .list:nth-of-type(2) {
+    flex-direction: row-reverse; }
+    .list:nth-of-type(2) b:after {
+      content: '';
+      display: inline-block;
+      width: 50%;
+      height: 2px;
+      background: #000;
+      vertical-align: middle; }
+
+/*# sourceMappingURL=style.css.map */
