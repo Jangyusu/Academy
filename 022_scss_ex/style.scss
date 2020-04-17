@@ -1,0 +1,56 @@
+@import "common";
+
+main {
+    width: 80%;
+    margin: 0 auto;
+}
+.contents {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+    
+    &_line {
+        width: 155px;
+        height: 1px;
+        background: #000;
+        display: block;
+    }
+
+    &_text {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+
+        p:nth-child(1) {
+            font-size: 48px;
+            font-weight: bold;
+            line-height: 70px;
+        }
+
+        p:nth-child(2) {
+            width: 340px;
+            font-size: 15px;
+            line-height: 30px;
+        }
+
+        p:nth-child(3) {
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 50px;
+
+            &::after {
+                content: "";
+                width: 35px;
+                height: 7px;
+                margin-left: 10px;
+                background: url("img/more.png");
+                display: inline-block;
+            }
+        }
+    }
+    &_img {
+
+    }
+}
